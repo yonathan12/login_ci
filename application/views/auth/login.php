@@ -18,12 +18,14 @@
                     <h1 class="h4 text-gray-900 mb-4">Login Page</h1>
                     <?= $this->session->flashdata('message'); ?>
                   </div>
-                  <form class="user">
+                  <form class="user" method="post" action="<?= base_url();?>auth">
                     <div class="form-group">
-                      <input type="text" class="form-control form-control-user" id="email" aria-describedby="emailHelp" placeholder="Enter Email Address..." name="email">
+                      <input type="text" class="form-control form-control-user" id="email" aria-describedby="emailHelp" placeholder="Enter Email Address..." name="email" value="<?= set_value('email'); ?>">
+                      <?= form_error('email','<small class="text-danger pl-3">','</small>'); ?>
                     </div>
                     <div class="form-group">
                       <input type="password" class="form-control form-control-user" id="password" placeholder="Password" name="password">
+                      <?= form_error('password','<small class="text-danger pl-3">','</small>'); ?>
                     </div>
                     <!-- <div class="form-group">
                       <div class="custom-control custom-checkbox small">
