@@ -57,13 +57,13 @@ $subMenu = $this->db->query($querySubMenu)->result_array();
 <?php endforeach; ?>
 
 <!-- Divider -->
-<hr class="sidebar-divider">
+<hr class="sidebar-divider mt-3">
 <!-- End sub menu -->
 <?php endforeach; ?>
 
  <!-- Nav Item - Charts -->
 <li class="nav-item">
-  <a class="nav-link" href="<?= base_url(); ?>auth/logout">
+  <a class="nav-link pb-0" href="<?= base_url(); ?>auth/logout">
     <i class="fas fa-fw fa-fw fa-sign-out-alt"></i>
     <span>Logout</span></a>
 </li>
